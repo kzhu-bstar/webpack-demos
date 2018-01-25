@@ -132,8 +132,35 @@ module.exports = {
 
 ## Demo04: CSS-loader ([source](https://github.com/ruanyf/webpack-demos/tree/master/demo04))
 
+https://www.npmjs.com/package/css-loader
+
 Webpack allows you to require CSS in JS file, then preprocessed CSS file with CSS-loader.
 
 ```bash
 $ npm install --save-dev style-loader css-loader
+```
+
+## Demo05: URL-loader ([source](https://github.com/ruanyf/webpack-demos/tree/master/demo05))
+
+https://www.npmjs.com/package/url-loader
+
+```bash
+$ npm install --save-dev url-loader
+```
+
+error
+
+```
+ERROR in ./big.png
+Module build failed: Error: Cannot find module 'file-loader'
+    at Function.Module._resolveFilename (module.js:469:15)
+    at Function.Module._load (module.js:417:25)
+    at Module.require (module.js:497:17)
+    at require (internal/module.js:20:19)
+    at Object.module.exports (...webpack-demos\node_modules\_url-loader@0.6.2@url-loader\index.js:35:24)
+ @ ./main.js 7:11-31
+```
+
+```bash
+$ npm install --save-dev file-loader
 ```
