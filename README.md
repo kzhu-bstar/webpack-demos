@@ -164,3 +164,60 @@ Module build failed: Error: Cannot find module 'file-loader'
 ```bash
 $ npm install --save-dev file-loader
 ```
+
+## Demo07: UglifyJs Plugin ([source](https://github.com/ruanyf/webpack-demos/tree/master/demo07))
+
+https://www.npmjs.com/package/unminified-webpack-plugin
+
+```bash
+$ npm install --save-dev unminified-webpack-plugin
+```
+
+## Demo08: HTML Webpack Plugin and Open Browser Webpack Plugin ([source](https://github.com/ruanyf/webpack-demos/tree/master/demo08))
+
+https://www.npmjs.com/package/html-webpack-plugin
+
+```bash
+$ npm install html-webpack-plugin --save-dev
+```
+
+```bash
+$ npm install open-browser-webpack-plugin --save-dev
+```
+
+
+## Demo12: Common chunk ([source](https://github.com/ruanyf/webpack-demos/tree/master/demo12))
+
+```javascript
+// webpack.config.js
+var CommonsChunkPlugin = require("webpack/lib/optimize/CommonsChunkPlugin");
+module.exports = {
+    entry: {
+        bundle1: './main1.jsx',
+        bundle2: './main2.jsx'
+    },
+    output: {
+        filename: '[name].js'
+    },
+    module: {
+        loaders: [{
+            test: /\.js[x]?$/,
+            exclude: /node_modules/,
+            loader: 'babel-loader',
+            query: {
+                presets: ['env', 'react']
+            }
+        }, ]
+    },
+    plugins: [
+        new CommonsChunkPlugin({
+            name: "init",
+            minChunks: 2
+        })
+    ]
+}
+
+```
+
+
+# Demo9 All

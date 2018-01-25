@@ -16,7 +16,10 @@
     "babel-preset-react": "^6.24.1",
     "css-loader": "^0.28.9",
     "file-loader": "^1.1.6",
+    "html-webpack-plugin": "^2.30.1",
+    "open-browser-webpack-plugin": "^0.0.5",
     "style-loader": "^0.19.1",
+    "unminified-webpack-plugin": "^1.4.2",
     "url-loader": "^0.6.2",
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.11.1"
